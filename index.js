@@ -37,7 +37,7 @@ async function start() {
             } catch (e) {
                 console.log('Pairing error: ' + e.message);
             }
-        }, 3000);
+        }, 10000);
     }
 
     sock.ev.on('messages.upsert', async ({ messages }) => {
