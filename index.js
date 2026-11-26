@@ -21,8 +21,9 @@ async function start() {
     sock.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect } = update;
         if (connection === 'close') {
-            console.log('Disconnected, restarting...');
-            start();
+  console.log('Disconnected, waiting 10s before restart...')
+  setTimeout(() => start(), 10000);
+        }
         }
         if (connection === 'open') {
             console.log('Client is ready! Bot don connect!');
