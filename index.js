@@ -24,7 +24,6 @@ async function start() {
   console.log('Disconnected, waiting 10s before restart...')
   setTimeout(() => start(), 10000);
         }
-        }
         if (connection === 'open') {
             console.log('Client is ready! Bot don connect!');
         }
